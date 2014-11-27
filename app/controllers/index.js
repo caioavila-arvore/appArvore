@@ -1,8 +1,12 @@
+
 var controls=require('controls');
 
 // get main and menu view as objects
 var menuView=controls.getMenuView();
 var mainView=controls.getMainView();
+
+
+
 
 // attach event listener to menu button
 mainView.menuButton.add(controls.getMenuButton({
@@ -22,9 +26,9 @@ var configView=controls.getConfigView();
 
 //add menu view to ConfigView exposed by widget
 configView.menuButton.add(controls.getMenuButton({
-                h: '60',
-                w: '60'
-            }));
+    h: '60',
+    w: '60'
+}));
 
 //Minor changes to click event. Update the menuOpen status;
 configView.menuButton.addEventListener('click',function(){
@@ -66,4 +70,5 @@ menuView.menuTable.addEventListener('click',function(e){
     Ti.API.info(e.rowData.id); 
 });
 
+	
 $.index.open();
